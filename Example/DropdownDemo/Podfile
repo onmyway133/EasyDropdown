@@ -1,0 +1,8 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'DropdownDemo' do
+ pod 'Dropdown', path: '../../'
+end
+
