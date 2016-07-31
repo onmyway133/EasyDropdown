@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D28908A71D4C9C2700E5412A /* DropdownController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28908A61D4C9C2700E5412A /* DropdownController.swift */; };
+		D28908B61D4DEA4A00E5412A /* dropdown_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = D28908B51D4DEA4A00E5412A /* dropdown_arrow.png */; };
 		D2FAE92C1D426DB200EE3E62 /* Dropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FAE92B1D426DB200EE3E62 /* Dropdown.swift */; };
 		D2FAE92E1D426DC400EE3E62 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FAE92D1D426DC400EE3E62 /* Tests.swift */; };
 		D5B2E8AA1C3A780C00C0327D /* Dropdown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B2E89F1C3A780C00C0327D /* Dropdown.framework */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		D28908A61D4C9C2700E5412A /* DropdownController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropdownController.swift; sourceTree = "<group>"; };
+		D28908B51D4DEA4A00E5412A /* dropdown_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropdown_arrow.png; sourceTree = "<group>"; };
 		D2FAE92B1D426DB200EE3E62 /* Dropdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dropdown.swift; sourceTree = "<group>"; };
 		D2FAE92D1D426DC400EE3E62 /* Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		D500FD111C3AABED00782D78 /* Playground-iOS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Playground-iOS.playground"; sourceTree = "<group>"; };
@@ -64,6 +66,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D28908B21D4DE76300E5412A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D28908B51D4DEA4A00E5412A /* dropdown_arrow.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		D2FAE92A1D426DA200EE3E62 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +88,7 @@
 		D5B2E8951C3A780C00C0327D = {
 			isa = PBXGroup;
 			children = (
+				D28908B21D4DE76300E5412A /* Resources */,
 				D2FAE92A1D426DA200EE3E62 /* Frameworks */,
 				D500FD111C3AABED00782D78 /* Playground-iOS.playground */,
 				D500FD121C3AAC8E00782D78 /* Playground-Mac.playground */,
@@ -216,6 +227,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D28908B61D4DEA4A00E5412A /* dropdown_arrow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

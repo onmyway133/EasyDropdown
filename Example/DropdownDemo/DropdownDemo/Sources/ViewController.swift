@@ -9,6 +9,8 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     view.backgroundColor = UIColor.whiteColor()
 
+    navigationController?.navigationBar.barTintColor = UIColor(red: 22/255, green: 160/255, blue: 33/255, alpha: 1)
+
     setupNavigationItem()
   }
 
@@ -18,7 +20,6 @@ class ViewController: UIViewController {
     let button = ArrowButton()
 
     button.setTitle("Menu", forState: .Normal)
-    button.setTitleColor(UIColor.redColor(), forState: .Normal)
     button.addTarget(self, action: #selector(buttonTouched(_:)), forControlEvents: .TouchUpInside)
 
     navigationItem.titleView = button
@@ -39,7 +40,11 @@ class ViewController: UIViewController {
 
     let dropdown = DropdownController(contentController: contentController, navigationController: navigationController)
     dropdown?.animationBlock = { [weak self] showing in
-      print(self)
+      guard let arrowButton = self?.navigationItem.titleView as? ArrowButton
+        else { return }
+
+      arrowButton.arrow.transform = showing
+        ? CGAffineTransformMakeRotation(CGFloat(M_PI)) : CGAffineTransformIdentity
     }
 
     return dropdown

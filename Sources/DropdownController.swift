@@ -15,11 +15,10 @@ public class DropdownController: UIViewController {
   // MARK: - Initialization
 
   public convenience init?(contentController: UIViewController, navigationController: UINavigationController) {
-    let offsetY = navigationController.navigationBar.frame.height
-      + UIApplication.sharedApplication().statusBarFrame.height
-
     guard let containerView = navigationController.tabBarController?.view ?? navigationController.view
       else { return nil }
+
+    let offsetY = navigationController.navigationBar.frame.maxY
 
     self.init(contentController: contentController, containerView: containerView, offsetY: offsetY)
   }
