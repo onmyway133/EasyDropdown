@@ -11,6 +11,7 @@ public class DropdownController: UIViewController {
   lazy var backgroundView: UIView = self.makeBackgroundView()
   var offsetY: CGFloat = 0
   var showing: Bool = false
+  var animating: Bool = false
 
   // MARK: - Initialization
 
@@ -73,24 +74,26 @@ public class DropdownController: UIViewController {
   // MARK: - Showing
 
   public func toggle() {
-    showing = !showing
-    toggle(showing)
+    toggle(!showing)
   }
 
   public func show() {
-    showing = true
-    toggle(showing)
+    toggle(true)
   }
 
   public func hide() {
-    showing = false
-    toggle(showing)
+    toggle(false)
   }
 
   func toggle(showing: Bool) {
     guard let containerView = containerView,
       contentController = contentController
       else { return }
+
+    guard !animating else { return }
+
+    animating = true
+    self.showing = showing
 
     view.frame = CGRect(x: 0,
                         y: offsetY,
@@ -125,6 +128,8 @@ public class DropdownController: UIViewController {
         if !showing {
           self.view.removeFromSuperview()
         }
+
+        self.animating = false
     })
   }
 }
