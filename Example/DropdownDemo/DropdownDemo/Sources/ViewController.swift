@@ -36,14 +36,21 @@ class ViewController: UIViewController {
   func makeDropdown() -> DropdownController? {
     guard let navigationController = navigationController else { return nil }
 
-    let contentController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ContentController") as! ContentController
+    let items = ["World", "Sports", "Culture", "Business", "Travel"]
+    let contentController = TableController(items: items, initialIndex: 0)
+    contentController.action = { [weak self] index in
+      guard let button = self?.navigationItem.titleView as? ArrowButton
+        else { return }
+
+      button.label.text = items[index]
+    }
 
     let dropdown = DropdownController(contentController: contentController, navigationController: navigationController)
     dropdown?.animationBlock = { [weak self] showing in
-      guard let arrowButton = self?.navigationItem.titleView as? ArrowButton
+      guard let button = self?.navigationItem.titleView as? ArrowButton
         else { return }
 
-      arrowButton.arrow.transform = showing
+      button.arrow.transform = showing
         ? CGAffineTransformMakeRotation(CGFloat(M_PI)) : CGAffineTransformIdentity
     }
 
