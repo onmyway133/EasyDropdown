@@ -43,6 +43,7 @@ class ViewController: UIViewController {
         else { return }
 
       button.label.text = items[index]
+      self?.dropdown?.hide()
     }
 
     let dropdown = DropdownController(contentController: contentController, navigationController: navigationController)

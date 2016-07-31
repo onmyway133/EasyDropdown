@@ -27,7 +27,6 @@ public class TableController: UIViewController, UITableViewDataSource, UITableVi
     super.viewDidLoad()
 
     view.backgroundColor = UIColor.clearColor()
-    tableView.backgroundColor = UIColor.clearColor()
 
     view.addSubview(tableView)
     tableView.reloadData()
@@ -38,6 +37,7 @@ public class TableController: UIViewController, UITableViewDataSource, UITableVi
   public override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
 
+    view.frame.size.height = tableView.contentSize.height
     tableView.frame = view.bounds
   }
 

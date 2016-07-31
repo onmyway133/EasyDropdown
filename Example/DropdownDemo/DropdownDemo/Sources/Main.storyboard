@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -32,7 +33,18 @@
                     <view key="view" contentMode="scaleToFill" id="E0n-Ps-6aD">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="firewatch" translatesAutoresizingMaskIntoConstraints="NO" id="O3s-QA-ZGT">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="O3s-QA-ZGT" secondAttribute="trailing" id="0FL-NB-CSx"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="O3s-QA-ZGT" secondAttribute="bottom" id="HWA-WN-rDb"/>
+                            <constraint firstItem="O3s-QA-ZGT" firstAttribute="leading" secondItem="E0n-Ps-6aD" secondAttribute="leading" id="QYK-YY-lW3"/>
+                            <constraint firstItem="O3s-QA-ZGT" firstAttribute="top" secondItem="E0n-Ps-6aD" secondAttribute="topMargin" id="bfi-Nz-My6"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="QHc-By-zmk"/>
                 </viewController>
@@ -167,4 +179,7 @@
             <point key="canvasLocation" x="1491" y="471"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="firewatch" width="960" height="540"/>
+    </resources>
 </document>
