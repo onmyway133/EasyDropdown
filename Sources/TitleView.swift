@@ -19,17 +19,20 @@ public class TitleView: UIView {
 
     // Content
     let contentController = TableController(items: items, initialIndex: 0)
-    contentController.action = { [weak self] index in
-      self?.button.label.text = items[index]
-      self?.action?(index)
-      self?.layoutSubviews()
-    }
 
     // Dropdown
     guard let dropdown = DropdownController(contentController: contentController, navigationController: navigationController)
       else { return nil }
 
     self.dropdown = dropdown
+
+    contentController.action = { [weak self, weak dropdown] index in
+      self?.button.label.text = items[index]
+      self?.action?(index)
+      self?.layoutSubviews()
+      dropdown?.hide()
+    }
+
     dropdown.animationBlock = { [weak self] showing in
       self?.button.arrow.transform = showing
         ? CGAffineTransformMakeRotation(CGFloat(M_PI)) : CGAffineTransformIdentity
