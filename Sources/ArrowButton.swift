@@ -5,6 +5,8 @@ public class ArrowButton: UIButton {
   public lazy var label: UILabel = self.makeLabel()
   public lazy var arrow: UIImageView = self.makeArrow()
 
+  let padding: CGFloat = 35
+
   public init() {
     super.init(frame: CGRect.zero)
 
@@ -22,7 +24,12 @@ public class ArrowButton: UIButton {
     label.center = CGPoint(x: bounds.size.width / 2, y: bounds.size.height / 2)
 
     arrow.frame.size = CGSize(width: 15, height: 15)
-    arrow.center = CGPoint(x: label.frame.maxX + 35, y: bounds.size.height / 2)
+    arrow.center = CGPoint(x: label.frame.maxX + padding, y: bounds.size.height / 2)
+  }
+
+  public override func sizeThatFits(size: CGSize) -> CGSize {
+    let size = super.sizeThatFits(size)
+    return CGSize(width: size.width + arrow.frame.size.width + padding, height: size.height)
   }
 
   // MARK: - Views

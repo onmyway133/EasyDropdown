@@ -43,7 +43,8 @@ public class TitleView: UIView {
   public override func layoutSubviews() {
     super.layoutSubviews()
 
-    button.frame = bounds
+    button.sizeToFit()
+    frame.size = button.frame.size
   }
 
   // MARK: - Action
