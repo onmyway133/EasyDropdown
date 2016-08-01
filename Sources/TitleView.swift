@@ -22,6 +22,7 @@ public class TitleView: UIView {
     contentController.action = { [weak self] index in
       self?.button.label.text = items[index]
       self?.action?(index)
+      self?.layoutSubviews()
     }
 
     // Dropdown
