@@ -13,8 +13,7 @@ public class TitleView: UIView {
 
     // Button
     button = ArrowButton()
-    button.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-    button.setTitle(title, forState: .Normal)
+    button.label.text = title
     button.addTarget(self, action: #selector(buttonTouched(_:)), forControlEvents: .TouchUpInside)
     addSubview(button)
 
