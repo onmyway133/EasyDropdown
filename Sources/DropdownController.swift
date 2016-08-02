@@ -12,6 +12,7 @@ public class DropdownController: UIViewController {
   var offsetY: CGFloat = 0
   var showing: Bool = false
   var animating: Bool = false
+  let padding: CGFloat = 100
 
   // MARK: - Initialization
 
@@ -103,7 +104,7 @@ public class DropdownController: UIViewController {
     if showing {
       containerView.addSubview(view)
       backgroundView.alpha = 0
-      contentController.view.frame.origin.y -= contentController.view.frame.height
+      contentController.view.frame.origin.y -= contentController.view.frame.height + padding
     } else {
       backgroundView.alpha = 0.5
     }
@@ -120,7 +121,7 @@ public class DropdownController: UIViewController {
           self.backgroundView.alpha = 0.5
           contentController.view.frame.origin.y = 0
         } else {
-          contentController.view.frame.origin.y -= contentController.view.frame.height
+          contentController.view.frame.origin.y -= contentController.view.frame.height + self.padding
           self.backgroundView.alpha = 0
         }
 
