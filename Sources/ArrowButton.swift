@@ -53,4 +53,13 @@ public class ArrowButton: UIButton {
 
     return arrow
   }
+
+  // MARK: - Touch
+
+  public override var highlighted: Bool {
+    didSet {
+      label.textColor = highlighted ? Config.ArrowButton.Text.selectedColor : Config.ArrowButton.Text.color
+      arrow.tintColor = highlighted ? Config.ArrowButton.Text.selectedColor : Config.ArrowButton.Text.color
+    }
+  }
 }

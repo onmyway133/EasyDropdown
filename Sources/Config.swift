@@ -6,6 +6,7 @@ public struct Config {
 
     public struct Text {
       public static var color: UIColor = UIColor.whiteColor()
+      public static var selectedColor: UIColor = UIColor.grayColor()
       public static var font: UIFont = UIFont.boldSystemFontOfSize(18)
     }
   }
