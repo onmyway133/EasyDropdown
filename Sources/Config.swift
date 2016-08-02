@@ -2,6 +2,8 @@ import UIKit
 
 public struct Config {
 
+  public static var topLineColor: UIColor = UIColor.darkGrayColor().colorWithAlphaComponent(0.8)
+
   public struct ArrowButton {
 
     public struct Text {

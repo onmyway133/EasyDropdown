@@ -9,6 +9,8 @@ public class DropdownController: UIViewController {
 
   weak var containerView: UIView?
   lazy var backgroundView: UIView = self.makeBackgroundView()
+  lazy var topLine: CALayer = self.makeTopLine()
+
   var offsetY: CGFloat = 0
   var showing: Bool = false
   var animating: Bool = false
@@ -32,6 +34,7 @@ public class DropdownController: UIViewController {
     super.init(nibName: nil, bundle: nil)
 
     view.addSubview(backgroundView)
+    view.layer.addSublayer(topLine)
     view.clipsToBounds = true
 
     self.contentController = contentController
@@ -49,7 +52,8 @@ public class DropdownController: UIViewController {
   public override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
 
-    contentController?.view.frame = view.bounds
+    topLine.frame = CGRect(x: 0, y: 0,
+                           width: view.bounds.size.width, height: 1)
     backgroundView.frame = view.bounds
   }
 
@@ -64,6 +68,13 @@ public class DropdownController: UIViewController {
     view.addGestureRecognizer(gr)
 
     return view
+  }
+
+  func makeTopLine() -> CALayer {
+    let layer = CALayer()
+    layer.backgroundColor = Config.topLineColor.CGColor
+
+    return layer
   }
 
   // MARK: - Action
@@ -100,6 +111,7 @@ public class DropdownController: UIViewController {
                         y: offsetY,
                         width: containerView.frame.size.width,
                         height: containerView.frame.size.height - offsetY)
+    contentController.view.frame = view.bounds
 
     if showing {
       containerView.addSubview(view)
@@ -119,10 +131,12 @@ public class DropdownController: UIViewController {
 
         if showing {
           self.backgroundView.alpha = 0.5
-          contentController.view.frame.origin.y = 0
+          self.topLine.opacity = 1
+          contentController.view.frame.origin.y = 1
         } else {
           contentController.view.frame.origin.y -= contentController.view.frame.height + self.padding
           self.backgroundView.alpha = 0
+          self.topLine.opacity = 0
         }
 
       }, completion: { (finished) in
