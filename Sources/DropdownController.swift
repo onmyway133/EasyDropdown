@@ -12,7 +12,7 @@ public class DropdownController: UIViewController {
   var offsetY: CGFloat = 0
   var showing: Bool = false
   var animating: Bool = false
-  let padding: CGFloat = 100
+  let padding: CGFloat = 20
 
   // MARK: - Initialization
 
