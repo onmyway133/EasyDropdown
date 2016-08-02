@@ -53,7 +53,7 @@ public class TableController: UIViewController, UITableViewDataSource, UITableVi
     tableView.dataSource = self
     tableView.delegate = self
 
-    tableView.registerClass(TableCell.self, forCellReuseIdentifier: "Cell")
+    tableView.registerClass(Config.List.Cell.type, forCellReuseIdentifier: String(Config.List.Cell.type))
 
     let gr = UITapGestureRecognizer(target: self, action: #selector(viewTapped(_:)))
     gr.cancelsTouchesInView = false
@@ -91,11 +91,10 @@ public class TableController: UIViewController, UITableViewDataSource, UITableVi
 
   public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 
-    let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! TableCell
+    let cell = tableView.dequeueReusableCellWithIdentifier(String(Config.List.Cell.type), forIndexPath: indexPath)
 
     let item = items[indexPath.row]
-    cell.textLabel?.text = item
-    cell.accessoryType = (selectedIndex == indexPath.row) ? .Checkmark : .None
+    Config.List.Cell.config(cell: cell, item: item, selected: (selectedIndex == indexPath.row))
 
     return cell
   }

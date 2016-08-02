@@ -17,6 +17,14 @@ public struct Config {
       public static var font: UIFont = UIFont.boldSystemFontOfSize(15)
     }
 
+    public struct Cell {
+      public static var type: UITableViewCell.Type = TableCell.self
+      public static var config: (cell: UITableViewCell, item: String, selected: Bool) -> Void = { cell, item, selected in
+        cell.textLabel?.text = item
+        cell.accessoryType = selected ? .Checkmark : .None
+      }
+    }
+
     public static var backgroundColor: UIColor = UIColor.whiteColor()
   }
 }
