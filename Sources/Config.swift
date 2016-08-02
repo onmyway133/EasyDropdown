@@ -19,7 +19,7 @@ public struct Config {
 
     public struct Cell {
       public static var type: UITableViewCell.Type = TableCell.self
-      public static var config: (cell: UITableViewCell, item: String, selected: Bool) -> Void = { cell, item, selected in
+      public static var config: (cell: UITableViewCell, item: String, index: Int, selected: Bool) -> Void = { cell, item, index, selected in
         cell.textLabel?.text = item
         cell.accessoryType = selected ? .Checkmark : .None
       }

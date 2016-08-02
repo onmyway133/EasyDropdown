@@ -94,7 +94,7 @@ public class TableController: UIViewController, UITableViewDataSource, UITableVi
     let cell = tableView.dequeueReusableCellWithIdentifier(String(Config.List.Cell.type), forIndexPath: indexPath)
 
     let item = items[indexPath.row]
-    Config.List.Cell.config(cell: cell, item: item, selected: (selectedIndex == indexPath.row))
+    Config.List.Cell.config(cell: cell, item: item, index: indexPath.row, selected: (selectedIndex == indexPath.row))
 
     return cell
   }
