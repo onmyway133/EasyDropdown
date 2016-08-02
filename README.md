@@ -1,4 +1,5 @@
 # Dropdown
+Dropdown in Swift
 
 [![CI Status](http://img.shields.io/travis/hyperoslo/Dropdown.svg?style=flat)](https://travis-ci.org/hyperoslo/Dropdown)
 [![Version](https://img.shields.io/cocoapods/v/Dropdown.svg?style=flat)](http://cocoadocs.org/docsets/Dropdown)
@@ -6,15 +7,36 @@
 [![License](https://img.shields.io/cocoapods/l/Dropdown.svg?style=flat)](http://cocoadocs.org/docsets/Dropdown)
 [![Platform](https://img.shields.io/cocoapods/p/Dropdown.svg?style=flat)](http://cocoadocs.org/docsets/Dropdown)
 
-## Description
-
-**Dropdown** description.
+![](Screenshots/dropdown.gif)
 
 ## Usage
 
+### Basic
+
 ```swift
-<API>
+let items = ["World", "Sports", "Culture", "Business", "Travel"]
+let titleView = TitleView(navigationController: navigationController!, title: "Menu", items: items)
+titleView?.action = { [weak self] index in
+  print("select \(index)")
+}
+
+navigationItem.titleView = titleView
 ```
+
+### Customization
+
+```swift
+let contentController = TableController(items: items, initialIndex: 0)
+let dropdown = DropdownController(contentController: contentController, navigationController: navigationController)
+```
+
+### Configuration
+
+```swift
+Config.List.DefaultCell.Text.color = UIColor.redColor()
+```
+
+
 
 ## Installation
 
