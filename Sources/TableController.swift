@@ -50,7 +50,7 @@ public class TableController: UIViewController, UITableViewDataSource, UITableVi
     tableView.tableFooterView = UIView()
     tableView.backgroundColor = UIColor.clearColor()
     tableView.rowHeight = Config.List.rowHeight
-    tableView.separatorColor = Config.List.separatorColor
+    tableView.separatorStyle = .None
 
     tableView.dataSource = self
     tableView.delegate = self

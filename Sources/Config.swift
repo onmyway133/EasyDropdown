@@ -18,6 +18,8 @@ public struct Config {
         public static var color: UIColor = UIColor.whiteColor()
         public static var font: UIFont = UIFont.systemFontOfSize(16)
       }
+
+      public static var separatorColor: UIColor = UIColor.lightGrayColor().colorWithAlphaComponent(0.5)
     }
 
     public struct Cell {
@@ -30,8 +32,7 @@ public struct Config {
       }
     }
 
-    public static var backgroundColor: UIColor = UIColor(red: 86/255, green: 111/255, blue: 143/255, alpha: 1)
-    public static var separatorColor: UIColor = UIColor.lightGrayColor().colorWithAlphaComponent(0.5)
-    public static var rowHeight: CGFloat = 60
+    public static var backgroundColor: UIColor = UIColor(red: 65/255, green: 143/255, blue: 152/255, alpha: 1)
+    public static var rowHeight: CGFloat = 50
   }
 }

@@ -4,6 +4,7 @@ public class TableCell: UITableViewCell {
 
   public lazy var label: UILabel = self.makeLabel()
   public lazy var checkmark: UIImageView = self.makeCheckmark()
+  public lazy var separator: UIView = self.makeSeparator()
 
   // MARK: - Initialization
 
@@ -12,6 +13,7 @@ public class TableCell: UITableViewCell {
 
     contentView.addSubview(label)
     contentView.addSubview(checkmark)
+    contentView.addSubview(separator)
 
     setupContraints()
 
@@ -45,6 +47,13 @@ public class TableCell: UITableViewCell {
     return checkmark
   }
 
+  func makeSeparator() -> UIView {
+    let view = UIView()
+    view.backgroundColor = Config.List.DefaultCell.separatorColor
+
+    return view
+  }
+
   // MARK: - Constraints
 
   func setupContraints() {
@@ -61,5 +70,13 @@ public class TableCell: UITableViewCell {
     contentView.addConstraint(NSLayoutConstraint(item: checkmark, attribute: .Right, relatedBy: .Equal, toItem: contentView, attribute: .Right, multiplier: 1, constant: -20))
     contentView.addConstraint(NSLayoutConstraint(item: checkmark, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 20))
     contentView.addConstraint(NSLayoutConstraint(item: checkmark, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 20))
+
+    // Separator
+    separator.translatesAutoresizingMaskIntoConstraints = false
+
+    contentView.addConstraint(NSLayoutConstraint(item: separator, attribute: .Bottom, relatedBy: .Equal, toItem: contentView, attribute: .Bottom, multiplier: 1, constant: 0))
+    contentView.addConstraint(NSLayoutConstraint(item: separator, attribute: .Left, relatedBy: .Equal, toItem: contentView, attribute: .Left, multiplier: 1, constant: 0))
+    contentView.addConstraint(NSLayoutConstraint(item: separator, attribute: .Right, relatedBy: .Equal, toItem: contentView, attribute: .Right, multiplier: 1, constant: 0))
+    contentView.addConstraint(NSLayoutConstraint(item: separator, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 0.5))
   }
 }
