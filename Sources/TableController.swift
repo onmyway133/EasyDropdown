@@ -80,7 +80,7 @@ public class TableController: UIViewController, UITableViewDataSource, UITableVi
   // MARK: - GestureDelegate
 
   public func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool {
-    return touch.view?.isDescendantOfView(tableView) ?? false
+    return touch.view is UITableView
   }
 
   // MARK: - DataSource
