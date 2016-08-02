@@ -49,6 +49,8 @@ public class TableController: UIViewController, UITableViewDataSource, UITableVi
     let tableView = UITableView()
     tableView.tableFooterView = UIView()
     tableView.backgroundColor = UIColor.clearColor()
+    tableView.rowHeight = Config.List.rowHeight
+    tableView.separatorColor = Config.List.separatorColor
 
     tableView.dataSource = self
     tableView.delegate = self

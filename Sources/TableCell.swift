@@ -15,7 +15,7 @@ public class TableCell: UITableViewCell {
 
     setupContraints()
 
-    backgroundColor = Config.List.DefaultCell.backgroundColor
+    backgroundColor = Config.List.backgroundColor
   }
 
   public required init?(coder aDecoder: NSCoder) {
@@ -52,14 +52,14 @@ public class TableCell: UITableViewCell {
     label.translatesAutoresizingMaskIntoConstraints = false
 
     contentView.addConstraint(NSLayoutConstraint(item: label, attribute: .CenterY, relatedBy: .Equal, toItem: contentView, attribute: .CenterY, multiplier: 1, constant: 0))
-    contentView.addConstraint(NSLayoutConstraint(item: label, attribute: .Left, relatedBy: .Equal, toItem: contentView, attribute: .Left, multiplier: 1, constant: 10))
+    contentView.addConstraint(NSLayoutConstraint(item: label, attribute: .Left, relatedBy: .Equal, toItem: contentView, attribute: .Left, multiplier: 1, constant: 20))
 
     // Checkmark
     checkmark.translatesAutoresizingMaskIntoConstraints = false
     
     contentView.addConstraint(NSLayoutConstraint(item: checkmark, attribute: .CenterY, relatedBy: .Equal, toItem: contentView, attribute: .CenterY, multiplier: 1, constant: 0))
-    contentView.addConstraint(NSLayoutConstraint(item: checkmark, attribute: .Right, relatedBy: .Equal, toItem: contentView, attribute: .Right, multiplier: 1, constant: -10))
-    contentView.addConstraint(NSLayoutConstraint(item: checkmark, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 15))
-    contentView.addConstraint(NSLayoutConstraint(item: checkmark, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 15))
+    contentView.addConstraint(NSLayoutConstraint(item: checkmark, attribute: .Right, relatedBy: .Equal, toItem: contentView, attribute: .Right, multiplier: 1, constant: -20))
+    contentView.addConstraint(NSLayoutConstraint(item: checkmark, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 20))
+    contentView.addConstraint(NSLayoutConstraint(item: checkmark, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 20))
   }
 }
