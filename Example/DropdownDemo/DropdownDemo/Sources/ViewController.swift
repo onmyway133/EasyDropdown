@@ -16,8 +16,12 @@ class ViewController: UIViewController {
 
   func setupNavigationItem() {
     let items = ["World", "Sports", "Culture", "Business", "Travel"]
+    let titleView = TitleView(navigationController: navigationController!, title: "Menu", items: items)
+    titleView?.action = { index in
+      print("select \(index)")
+    }
 
-    navigationItem.titleView = TitleView(navigationController: navigationController!, title: "Menu", items: items)
+    navigationItem.titleView = titleView
   }
 }
 
