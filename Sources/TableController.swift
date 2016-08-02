@@ -1,12 +1,14 @@
 import UIKit
 
-public class TableController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
-  let items: [String]
-  var selectedIndex: Int
+public class TableController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate {
 
   public lazy var tableView: UITableView = self.makeTableView()
   public var action: ((Int) -> Void)?
+  public var dismiss: (() -> Void)?
+
+  let items: [String]
+  var selectedIndex: Int
+  lazy var topView: UIView = self.makeTopView()
 
   // MARK: - Initialization
 
@@ -28,6 +30,7 @@ public class TableController: UIViewController, UITableViewDataSource, UITableVi
 
     view.backgroundColor = UIColor.clearColor()
 
+    view.addSubview(topView)
     view.addSubview(tableView)
     tableView.reloadData()
   }
@@ -37,22 +40,47 @@ public class TableController: UIViewController, UITableViewDataSource, UITableVi
   public override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
 
-    view.frame.size.height = tableView.contentSize.height
     tableView.frame = view.bounds
   }
 
   // MARK: - Controls
 
-  public func makeTableView() -> UITableView {
+  func makeTableView() -> UITableView {
     let tableView = UITableView()
     tableView.tableFooterView = UIView()
+    tableView.backgroundColor = UIColor.clearColor()
 
     tableView.dataSource = self
     tableView.delegate = self
 
     tableView.registerClass(TableCell.self, forCellReuseIdentifier: "Cell")
 
+    let gr = UITapGestureRecognizer(target: self, action: #selector(viewTapped(_:)))
+    gr.cancelsTouchesInView = false
+    gr.delegate = self
+
+    tableView.addGestureRecognizer(gr)
+
     return tableView
+  }
+
+  func makeTopView() -> UIView {
+    let view = UIView()
+    view.backgroundColor = UIColor.whiteColor()
+
+    return view
+  }
+
+  // MARK: - Touch
+
+  func viewTapped(gesture: UITapGestureRecognizer) {
+    dismiss?()
+  }
+
+  // MARK: - GestureDelegate
+
+  public func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool {
+    return touch.view?.isDescendantOfView(tableView) ?? false
   }
 
   // MARK: - DataSource
@@ -85,5 +113,13 @@ public class TableController: UIViewController, UITableViewDataSource, UITableVi
     tableView.reloadRowsAtIndexPaths([previousIndexPath, selectedIndexPath], withRowAnimation: .Automatic)
 
     action?(indexPath.row)
+  }
+
+  // MARK: - ScrollViewDelegate
+
+  public func scrollViewDidScroll(scrollView: UIScrollView) {
+    topView.frame = CGRect(x: 0, y: 0,
+                           width: scrollView.bounds.size.width,
+                           height: abs(scrollView.contentOffset.y))
   }
 }

@@ -33,6 +33,10 @@ public class TitleView: UIView {
       dropdown?.hide()
     }
 
+    contentController.dismiss = { [weak dropdown] in
+      dropdown?.hide()
+    }
+
     dropdown.animationBlock = { [weak self] showing in
       self?.button.arrow.transform = showing
         ? CGAffineTransformMakeRotation(CGFloat(M_PI)) : CGAffineTransformIdentity
