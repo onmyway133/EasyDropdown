@@ -39,8 +39,8 @@ public class ArrowButton: UIButton {
 
   func makeLabel() -> UILabel {
     let label = UILabel()
-    label.textColor = UIColor.whiteColor()
-    label.font = UIFont.boldSystemFontOfSize(15)
+    label.textColor = Config.ArrowButton.Text.color
+    label.font = Config.ArrowButton.Text.font
     label.textAlignment = .Center
 
     return label
@@ -49,7 +49,7 @@ public class ArrowButton: UIButton {
   func makeArrow() -> UIImageView {
     let arrow = UIImageView()
     arrow.image = AssetManager.image("dropdown_arrow")?.imageWithRenderingMode(.AlwaysTemplate)
-    arrow.tintColor = UIColor.whiteColor()
+    arrow.tintColor = Config.ArrowButton.Text.color
 
     return arrow
   }
