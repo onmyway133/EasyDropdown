@@ -37,16 +37,29 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="firewatch" translatesAutoresizingMaskIntoConstraints="NO" id="O3s-QA-ZGT">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pt8-2C-O93">
+                                <rect key="frame" x="209" y="269" width="183" height="62"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="40"/>
+                                <state key="normal" title="Dropdown">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="O3s-QA-ZGT" secondAttribute="trailing" id="0FL-NB-CSx"/>
+                            <constraint firstItem="Pt8-2C-O93" firstAttribute="centerY" secondItem="E0n-Ps-6aD" secondAttribute="centerY" id="DtV-FN-MjH"/>
                             <constraint firstAttribute="bottomMargin" secondItem="O3s-QA-ZGT" secondAttribute="bottom" id="HWA-WN-rDb"/>
+                            <constraint firstItem="Pt8-2C-O93" firstAttribute="centerX" secondItem="E0n-Ps-6aD" secondAttribute="centerX" id="Jg5-79-PeJ"/>
                             <constraint firstItem="O3s-QA-ZGT" firstAttribute="leading" secondItem="E0n-Ps-6aD" secondAttribute="leading" id="QYK-YY-lW3"/>
                             <constraint firstItem="O3s-QA-ZGT" firstAttribute="top" secondItem="E0n-Ps-6aD" secondAttribute="topMargin" id="bfi-Nz-My6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="QHc-By-zmk"/>
+                    <connections>
+                        <outlet property="button" destination="Pt8-2C-O93" id="eQY-Bs-UPO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fO7-P0-Wcl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
