@@ -1,9 +1,9 @@
 import UIKit
 
-public class ArrowButton: UIButton {
+open class ArrowButton: UIButton {
 
-  public lazy var label: UILabel = self.makeLabel()
-  public lazy var arrow: UIImageView = self.makeArrow()
+  open lazy var label: UILabel = self.makeLabel()
+  open lazy var arrow: UIImageView = self.makeArrow()
 
   let padding: CGFloat = 10
   let arrowSize: CGFloat = 15
@@ -19,7 +19,7 @@ public class ArrowButton: UIButton {
     fatalError("init(coder:) has not been implemented")
   }
 
-  public override func layoutSubviews() {
+  open override func layoutSubviews() {
     super.layoutSubviews()
 
     label.center = CGPoint(x: bounds.size.width / 2, y: bounds.size.height / 2)
@@ -28,7 +28,7 @@ public class ArrowButton: UIButton {
     arrow.center = CGPoint(x: label.frame.maxX + padding, y: bounds.size.height / 2)
   }
 
-  public override func sizeThatFits(size: CGSize) -> CGSize {
+  open override func sizeThatFits(_ size: CGSize) -> CGSize {
     label.sizeToFit()
 
     return CGSize(width: label.frame.size.width + arrowSize*2 + padding,
@@ -41,14 +41,14 @@ public class ArrowButton: UIButton {
     let label = UILabel()
     label.textColor = Config.ArrowButton.Text.color
     label.font = Config.ArrowButton.Text.font
-    label.textAlignment = .Center
+    label.textAlignment = .center
 
     return label
   }
 
   func makeArrow() -> UIImageView {
     let arrow = UIImageView()
-    arrow.image = AssetManager.image("dropdown_arrow")?.imageWithRenderingMode(.AlwaysTemplate)
+    arrow.image = AssetManager.image("dropdown_arrow")?.withRenderingMode(.alwaysTemplate)
     arrow.tintColor = Config.ArrowButton.Text.color
 
     return arrow
@@ -56,10 +56,10 @@ public class ArrowButton: UIButton {
 
   // MARK: - Touch
 
-  public override var highlighted: Bool {
+  open override var isHighlighted: Bool {
     didSet {
-      label.textColor = highlighted ? Config.ArrowButton.Text.selectedColor : Config.ArrowButton.Text.color
-      arrow.tintColor = highlighted ? Config.ArrowButton.Text.selectedColor : Config.ArrowButton.Text.color
+      label.textColor = isHighlighted ? Config.ArrowButton.Text.selectedColor : Config.ArrowButton.Text.color
+      arrow.tintColor = isHighlighted ? Config.ArrowButton.Text.selectedColor : Config.ArrowButton.Text.color
     }
   }
 }

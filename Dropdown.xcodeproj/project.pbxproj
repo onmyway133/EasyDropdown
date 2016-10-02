@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		D268DB671D51259B0097AD6F /* Dropdown.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D268DB661D51259B0097AD6F /* Dropdown.bundle */; };
 		D28908A71D4C9C2700E5412A /* DropdownController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28908A61D4C9C2700E5412A /* DropdownController.swift */; };
+		D2BD54AC1DA19ED500453CAC /* ArrowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD54A61DA19ED500453CAC /* ArrowButton.swift */; };
+		D2BD54AD1DA19ED500453CAC /* AssetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD54A71DA19ED500453CAC /* AssetManager.swift */; };
+		D2BD54AE1DA19ED500453CAC /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD54A81DA19ED500453CAC /* Config.swift */; };
+		D2BD54AF1DA19ED500453CAC /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD54A91DA19ED500453CAC /* TableCell.swift */; };
+		D2BD54B01DA19ED500453CAC /* TableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD54AA1DA19ED500453CAC /* TableController.swift */; };
+		D2BD54B11DA19ED500453CAC /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD54AB1DA19ED500453CAC /* TitleView.swift */; };
 		D2FAE92C1D426DB200EE3E62 /* Dropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FAE92B1D426DB200EE3E62 /* Dropdown.swift */; };
 		D2FAE92E1D426DC400EE3E62 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FAE92D1D426DC400EE3E62 /* Tests.swift */; };
 		D5B2E8AA1C3A780C00C0327D /* Dropdown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B2E89F1C3A780C00C0327D /* Dropdown.framework */; };
@@ -29,6 +35,12 @@
 /* Begin PBXFileReference section */
 		D268DB661D51259B0097AD6F /* Dropdown.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Dropdown.bundle; sourceTree = "<group>"; };
 		D28908A61D4C9C2700E5412A /* DropdownController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropdownController.swift; sourceTree = "<group>"; };
+		D2BD54A61DA19ED500453CAC /* ArrowButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrowButton.swift; sourceTree = "<group>"; };
+		D2BD54A71DA19ED500453CAC /* AssetManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetManager.swift; sourceTree = "<group>"; };
+		D2BD54A81DA19ED500453CAC /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		D2BD54A91DA19ED500453CAC /* TableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
+		D2BD54AA1DA19ED500453CAC /* TableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableController.swift; sourceTree = "<group>"; };
+		D2BD54AB1DA19ED500453CAC /* TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		D2FAE92B1D426DB200EE3E62 /* Dropdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dropdown.swift; sourceTree = "<group>"; };
 		D2FAE92D1D426DC400EE3E62 /* Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		D500FD111C3AABED00782D78 /* Playground-iOS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Playground-iOS.playground"; sourceTree = "<group>"; };
@@ -111,6 +123,12 @@
 		D5C629691C3A809D007F7B7C /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				D2BD54A61DA19ED500453CAC /* ArrowButton.swift */,
+				D2BD54A71DA19ED500453CAC /* AssetManager.swift */,
+				D2BD54A81DA19ED500453CAC /* Config.swift */,
+				D2BD54A91DA19ED500453CAC /* TableCell.swift */,
+				D2BD54AA1DA19ED500453CAC /* TableController.swift */,
+				D2BD54AB1DA19ED500453CAC /* TitleView.swift */,
 				D268DB661D51259B0097AD6F /* Dropdown.bundle */,
 				D2FAE92B1D426DB200EE3E62 /* Dropdown.swift */,
 				D28908A61D4C9C2700E5412A /* DropdownController.swift */,
@@ -190,9 +208,11 @@
 				TargetAttributes = {
 					D5B2E89E1C3A780C00C0327D = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
 					};
 					D5B2E8A81C3A780C00C0327D = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -256,8 +276,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2BD54B01DA19ED500453CAC /* TableController.swift in Sources */,
+				D2BD54AF1DA19ED500453CAC /* TableCell.swift in Sources */,
+				D2BD54AD1DA19ED500453CAC /* AssetManager.swift in Sources */,
 				D28908A71D4C9C2700E5412A /* DropdownController.swift in Sources */,
+				D2BD54AE1DA19ED500453CAC /* Config.swift in Sources */,
+				D2BD54AC1DA19ED500453CAC /* ArrowButton.swift in Sources */,
 				D2FAE92C1D426DB200EE3E62 /* Dropdown.swift in Sources */,
+				D2BD54B11DA19ED500453CAC /* TitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +411,7 @@
 				PRODUCT_NAME = Dropdown;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -403,6 +430,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "no.hyper.Dropdown-iOS";
 				PRODUCT_NAME = Dropdown;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -419,6 +447,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = no.hyper.DropdownTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -434,6 +463,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = no.hyper.DropdownTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

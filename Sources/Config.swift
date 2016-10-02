@@ -2,14 +2,14 @@ import UIKit
 
 public struct Config {
 
-  public static var topLineColor: UIColor = UIColor.darkGrayColor().colorWithAlphaComponent(0.8)
+  public static var topLineColor: UIColor = UIColor.darkGray.withAlphaComponent(0.8)
 
   public struct ArrowButton {
 
     public struct Text {
-      public static var color: UIColor = UIColor.whiteColor()
-      public static var selectedColor: UIColor = UIColor.grayColor()
-      public static var font: UIFont = UIFont.boldSystemFontOfSize(18)
+      public static var color: UIColor = UIColor.white
+      public static var selectedColor: UIColor = UIColor.gray
+      public static var font: UIFont = UIFont.boldSystemFont(ofSize: 18)
     }
   }
 
@@ -18,20 +18,20 @@ public struct Config {
     public struct DefaultCell {
       
       public struct Text {
-        public static var color: UIColor = UIColor.whiteColor()
-        public static var font: UIFont = UIFont.systemFontOfSize(16)
+        public static var color: UIColor = UIColor.white
+        public static var font: UIFont = UIFont.systemFont(ofSize: 16)
       }
 
-      public static var separatorColor: UIColor = UIColor.lightGrayColor().colorWithAlphaComponent(0.5)
+      public static var separatorColor: UIColor = UIColor.lightGray.withAlphaComponent(0.5)
     }
 
     public struct Cell {
       public static var type: UITableViewCell.Type = TableCell.self
-      public static var config: (cell: UITableViewCell, item: String, index: Int, selected: Bool) -> Void = { cell, item, index, selected in
+      public static var config: (_ cell: UITableViewCell, _ item: String, _ index: Int, _ selected: Bool) -> Void = { cell, item, index, selected in
         guard let cell = cell as? TableCell else { return }
 
-        cell.label.text = item.uppercaseString
-        cell.checkmark.hidden = !selected
+        cell.label.text = item.uppercased()
+        cell.checkmark.isHidden = !selected
       }
     }
 

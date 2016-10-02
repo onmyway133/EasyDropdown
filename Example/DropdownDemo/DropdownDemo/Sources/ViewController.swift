@@ -9,11 +9,11 @@ class ViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    view.backgroundColor = UIColor.whiteColor()
+    view.backgroundColor = UIColor.white
 
     button.layer.cornerRadius = 4
 
-    navigationController?.navigationBar.translucent = false
+    navigationController?.navigationBar.isTranslucent = false
     navigationController?.navigationBar.barTintColor = color
 
     setupNavigationItem()
@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     let items = ["World", "Sports", "Culture", "Business", "Travel"]
     let titleView = TitleView(navigationController: navigationController!, title: "Menu", items: items)
     titleView?.action = { [weak self] index in
-      self?.button.setTitle(items[index], forState: .Normal)
+      self?.button.setTitle(items[index], for: .normal)
       self?.button.layoutIfNeeded()
     }
 

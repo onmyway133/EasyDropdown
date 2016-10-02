@@ -1,10 +1,10 @@
 import UIKit
 
-public class TitleView: UIView {
+open class TitleView: UIView {
 
-  public var dropdown: DropdownController!
-  public var button: ArrowButton!
-  public var action: ((Int) -> Void)?
+  open var dropdown: DropdownController!
+  open var button: ArrowButton!
+  open var action: ((Int) -> Void)?
 
   // MARK: - Initialization
 
@@ -14,7 +14,7 @@ public class TitleView: UIView {
     // Button
     button = ArrowButton()
     button.label.text = title
-    button.addTarget(self, action: #selector(buttonTouched(_:)), forControlEvents: .TouchUpInside)
+    button.addTarget(self, action: #selector(buttonTouched(_:)), for: .touchUpInside)
     addSubview(button)
 
     // Content
@@ -39,7 +39,7 @@ public class TitleView: UIView {
 
     dropdown.animationBlock = { [weak self] showing in
       self?.button.arrow.transform = showing
-        ? CGAffineTransformMakeRotation(CGFloat(M_PI)) : CGAffineTransformIdentity
+        ? CGAffineTransform(rotationAngle: CGFloat(M_PI)) : CGAffineTransform.identity
     }
   }
 
@@ -47,7 +47,7 @@ public class TitleView: UIView {
     fatalError("init(coder:) has not been implemented")
   }
 
-  public override func layoutSubviews() {
+  open override func layoutSubviews() {
     super.layoutSubviews()
 
     button.sizeToFit()
@@ -56,7 +56,7 @@ public class TitleView: UIView {
 
   // MARK: - Action
 
-  func buttonTouched(button: ArrowButton) {
+  func buttonTouched(_ button: ArrowButton) {
     dropdown.toggle()
   }
 }

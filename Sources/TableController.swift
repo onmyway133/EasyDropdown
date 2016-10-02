@@ -1,10 +1,10 @@
 import UIKit
 
-public class TableController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate {
+open class TableController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate {
 
-  public lazy var tableView: UITableView = self.makeTableView()
-  public var action: ((Int) -> Void)?
-  public var dismiss: (() -> Void)?
+  open lazy var tableView: UITableView = self.makeTableView()
+  open var action: ((Int) -> Void)?
+  open var dismiss: (() -> Void)?
 
   let items: [String]
   var selectedIndex: Int
@@ -25,10 +25,10 @@ public class TableController: UIViewController, UITableViewDataSource, UITableVi
     fatalError("init(coder:) has not been implemented")
   }
 
-  public override func viewDidLoad() {
+  open override func viewDidLoad() {
     super.viewDidLoad()
 
-    view.backgroundColor = UIColor.clearColor()
+    view.backgroundColor = UIColor.clear
 
     view.addSubview(topView)
     view.addSubview(tableView)
@@ -37,7 +37,7 @@ public class TableController: UIViewController, UITableViewDataSource, UITableVi
 
   // MARK: - Layout
 
-  public override func viewDidLayoutSubviews() {
+  open override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
 
     tableView.frame = view.bounds
@@ -48,14 +48,14 @@ public class TableController: UIViewController, UITableViewDataSource, UITableVi
   func makeTableView() -> UITableView {
     let tableView = UITableView()
     tableView.tableFooterView = UIView()
-    tableView.backgroundColor = UIColor.clearColor()
+    tableView.backgroundColor = UIColor.clear
     tableView.rowHeight = Config.List.rowHeight
-    tableView.separatorStyle = .None
+    tableView.separatorStyle = .none
 
     tableView.dataSource = self
     tableView.delegate = self
 
-    tableView.registerClass(Config.List.Cell.type, forCellReuseIdentifier: String(Config.List.Cell.type))
+    tableView.register(Config.List.Cell.type, forCellReuseIdentifier: String(describing: Config.List.Cell.type))
 
     let gr = UITapGestureRecognizer(target: self, action: #selector(viewTapped(_:)))
     gr.cancelsTouchesInView = false
@@ -75,50 +75,50 @@ public class TableController: UIViewController, UITableViewDataSource, UITableVi
 
   // MARK: - Touch
 
-  func viewTapped(gesture: UITapGestureRecognizer) {
+  func viewTapped(_ gesture: UITapGestureRecognizer) {
     dismiss?()
   }
 
   // MARK: - GestureDelegate
 
-  public func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool {
+  open func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
     return touch.view is UITableView
   }
 
   // MARK: - DataSource
 
-  public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  open func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return items.count
   }
 
-  public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+  open func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-    let cell = tableView.dequeueReusableCellWithIdentifier(String(Config.List.Cell.type), forIndexPath: indexPath)
+    let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: Config.List.Cell.type), for: indexPath)
 
-    let item = items[indexPath.row]
-    Config.List.Cell.config(cell: cell, item: item, index: indexPath.row, selected: (selectedIndex == indexPath.row))
+    let item = items[(indexPath as NSIndexPath).row]
+    Config.List.Cell.config(cell, item, (indexPath as NSIndexPath).row, (selectedIndex == (indexPath as NSIndexPath).row))
 
     return cell
   }
 
   // MARK: - Delegate
 
-  public func tableView(tableView: UITableView,
-                        didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    tableView.deselectRowAtIndexPath(indexPath, animated: true)
+  open func tableView(_ tableView: UITableView,
+                        didSelectRowAt indexPath: IndexPath) {
+    tableView.deselectRow(at: indexPath, animated: true)
 
-    let previousIndexPath = NSIndexPath(forRow: selectedIndex, inSection: 0)
-    selectedIndex = indexPath.row
-    let selectedIndexPath = NSIndexPath(forRow: selectedIndex, inSection: 0)
+    let previousIndexPath = IndexPath(row: selectedIndex, section: 0)
+    selectedIndex = (indexPath as NSIndexPath).row
+    let selectedIndexPath = IndexPath(row: selectedIndex, section: 0)
 
-    tableView.reloadRowsAtIndexPaths([previousIndexPath, selectedIndexPath], withRowAnimation: .Automatic)
+    tableView.reloadRows(at: [previousIndexPath, selectedIndexPath], with: .automatic)
 
-    action?(indexPath.row)
+    action?((indexPath as NSIndexPath).row)
   }
 
   // MARK: - ScrollViewDelegate
 
-  public func scrollViewDidScroll(scrollView: UIScrollView) {
+  open func scrollViewDidScroll(_ scrollView: UIScrollView) {
     topView.frame = CGRect(x: 0, y: 0,
                            width: scrollView.bounds.size.width,
                            height: abs(scrollView.contentOffset.y))

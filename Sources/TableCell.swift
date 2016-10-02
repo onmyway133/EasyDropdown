@@ -1,10 +1,10 @@
 import UIKit
 
-public class TableCell: UITableViewCell {
+open class TableCell: UITableViewCell {
 
-  public lazy var label: UILabel = self.makeLabel()
-  public lazy var checkmark: UIImageView = self.makeCheckmark()
-  public lazy var separator: UIView = self.makeSeparator()
+  open lazy var label: UILabel = self.makeLabel()
+  open lazy var checkmark: UIImageView = self.makeCheckmark()
+  open lazy var separator: UIView = self.makeSeparator()
 
   // MARK: - Initialization
 
@@ -24,7 +24,7 @@ public class TableCell: UITableViewCell {
     fatalError("init(coder:) has not been implemented")
   }
 
-  public override func layoutSubviews() {
+  open override func layoutSubviews() {
     super.layoutSubviews()
 
     contentView.frame = bounds
@@ -41,7 +41,7 @@ public class TableCell: UITableViewCell {
   }
 
   func makeCheckmark() -> UIImageView {
-    let checkmark = UIImageView(image: AssetManager.image("checkmark")?.imageWithRenderingMode(.AlwaysTemplate))
+    let checkmark = UIImageView(image: AssetManager.image("checkmark")?.withRenderingMode(.alwaysTemplate))
     checkmark.tintColor = Config.List.DefaultCell.Text.color
 
     return checkmark
@@ -60,23 +60,23 @@ public class TableCell: UITableViewCell {
     // Label
     label.translatesAutoresizingMaskIntoConstraints = false
 
-    contentView.addConstraint(NSLayoutConstraint(item: label, attribute: .CenterY, relatedBy: .Equal, toItem: contentView, attribute: .CenterY, multiplier: 1, constant: 0))
-    contentView.addConstraint(NSLayoutConstraint(item: label, attribute: .Left, relatedBy: .Equal, toItem: contentView, attribute: .Left, multiplier: 1, constant: 20))
+    contentView.addConstraint(NSLayoutConstraint(item: label, attribute: .centerY, relatedBy: .equal, toItem: contentView, attribute: .centerY, multiplier: 1, constant: 0))
+    contentView.addConstraint(NSLayoutConstraint(item: label, attribute: .left, relatedBy: .equal, toItem: contentView, attribute: .left, multiplier: 1, constant: 20))
 
     // Checkmark
     checkmark.translatesAutoresizingMaskIntoConstraints = false
     
-    contentView.addConstraint(NSLayoutConstraint(item: checkmark, attribute: .CenterY, relatedBy: .Equal, toItem: contentView, attribute: .CenterY, multiplier: 1, constant: 0))
-    contentView.addConstraint(NSLayoutConstraint(item: checkmark, attribute: .Right, relatedBy: .Equal, toItem: contentView, attribute: .Right, multiplier: 1, constant: -20))
-    contentView.addConstraint(NSLayoutConstraint(item: checkmark, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 20))
-    contentView.addConstraint(NSLayoutConstraint(item: checkmark, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 20))
+    contentView.addConstraint(NSLayoutConstraint(item: checkmark, attribute: .centerY, relatedBy: .equal, toItem: contentView, attribute: .centerY, multiplier: 1, constant: 0))
+    contentView.addConstraint(NSLayoutConstraint(item: checkmark, attribute: .right, relatedBy: .equal, toItem: contentView, attribute: .right, multiplier: 1, constant: -20))
+    contentView.addConstraint(NSLayoutConstraint(item: checkmark, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 20))
+    contentView.addConstraint(NSLayoutConstraint(item: checkmark, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 20))
 
     // Separator
     separator.translatesAutoresizingMaskIntoConstraints = false
 
-    contentView.addConstraint(NSLayoutConstraint(item: separator, attribute: .Bottom, relatedBy: .Equal, toItem: contentView, attribute: .Bottom, multiplier: 1, constant: 0))
-    contentView.addConstraint(NSLayoutConstraint(item: separator, attribute: .Left, relatedBy: .Equal, toItem: contentView, attribute: .Left, multiplier: 1, constant: 0))
-    contentView.addConstraint(NSLayoutConstraint(item: separator, attribute: .Right, relatedBy: .Equal, toItem: contentView, attribute: .Right, multiplier: 1, constant: 0))
-    contentView.addConstraint(NSLayoutConstraint(item: separator, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 0.5))
+    contentView.addConstraint(NSLayoutConstraint(item: separator, attribute: .bottom, relatedBy: .equal, toItem: contentView, attribute: .bottom, multiplier: 1, constant: 0))
+    contentView.addConstraint(NSLayoutConstraint(item: separator, attribute: .left, relatedBy: .equal, toItem: contentView, attribute: .left, multiplier: 1, constant: 0))
+    contentView.addConstraint(NSLayoutConstraint(item: separator, attribute: .right, relatedBy: .equal, toItem: contentView, attribute: .right, multiplier: 1, constant: 0))
+    contentView.addConstraint(NSLayoutConstraint(item: separator, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 0.5))
   }
 }

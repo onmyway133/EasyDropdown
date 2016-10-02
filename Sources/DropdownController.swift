@@ -2,10 +2,10 @@ import UIKit
 
 public typealias AnimationBlock = (Bool) -> Void
 
-public class DropdownController: UIViewController {
+open class DropdownController: UIViewController {
 
-  public var animationBlock: AnimationBlock?
-  public private(set) var contentController: UIViewController?
+  open var animationBlock: AnimationBlock?
+  open fileprivate(set) var contentController: UIViewController?
 
   weak var containerView: UIView?
   lazy var backgroundView: UIView = self.makeBackgroundView()
@@ -40,7 +40,7 @@ public class DropdownController: UIViewController {
     self.contentController = contentController
     addChildViewController(contentController)
     view.addSubview(contentController.view)
-    contentController.didMoveToParentViewController(self)
+    contentController.didMove(toParentViewController: self)
   }
 
   public required init?(coder aDecoder: NSCoder) {
@@ -49,7 +49,7 @@ public class DropdownController: UIViewController {
 
   // MARK: - Layout
 
-  public override func viewDidLayoutSubviews() {
+  open override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
 
     topLine.frame = CGRect(x: 0, y: 0,
@@ -61,7 +61,7 @@ public class DropdownController: UIViewController {
 
   func makeBackgroundView() -> UIView {
     let view = UIView()
-    view.backgroundColor = UIColor.blackColor()
+    view.backgroundColor = UIColor.black
     view.alpha = 0
 
     let gr = UITapGestureRecognizer(target: self, action: #selector(backgroundViewTapped(_:)))
@@ -72,34 +72,34 @@ public class DropdownController: UIViewController {
 
   func makeTopLine() -> CALayer {
     let layer = CALayer()
-    layer.backgroundColor = Config.topLineColor.CGColor
+    layer.backgroundColor = Config.topLineColor.cgColor
 
     return layer
   }
 
   // MARK: - Action
 
-  func backgroundViewTapped(gesture: UITapGestureRecognizer) {
+  func backgroundViewTapped(_ gesture: UITapGestureRecognizer) {
     hide()
   }
 
   // MARK: - Showing
 
-  public func toggle() {
+  open func toggle() {
     toggle(!showing)
   }
 
-  public func show() {
+  open func show() {
     toggle(true)
   }
 
-  public func hide() {
+  open func hide() {
     toggle(false)
   }
 
-  func toggle(showing: Bool) {
+  func toggle(_ showing: Bool) {
     guard let containerView = containerView,
-      contentController = contentController
+      let contentController = contentController
       else { return }
 
     guard !animating else { return }
@@ -121,7 +121,7 @@ public class DropdownController: UIViewController {
       backgroundView.alpha = 0.5
     }
 
-    UIView.animateWithDuration(0.5, delay: 0,
+    UIView.animate(withDuration: 0.5, delay: 0,
                                usingSpringWithDamping: 0.7,
                                initialSpringVelocity: 0.5,
                                options: [],
