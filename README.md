@@ -1,7 +1,6 @@
 # Dropdown
 Dropdown in Swift
 
-[![CI Status](http://img.shields.io/travis/hyperoslo/Dropdown.svg?style=flat)](https://travis-ci.org/hyperoslo/Dropdown)
 [![Version](https://img.shields.io/cocoapods/v/Dropdown.svg?style=flat)](http://cocoadocs.org/docsets/Dropdown)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](https://img.shields.io/cocoapods/l/Dropdown.svg?style=flat)](http://cocoadocs.org/docsets/Dropdown)
@@ -44,7 +43,7 @@ Config.List.DefaultCell.Text.color = UIColor.redColor()
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'Dropdown'
+pod 'Dropdown', git: 'https://github.com/hyperoslo/Dropdown'
 ```
 
 **Dropdown** is also available through [Carthage](https://github.com/Carthage/Carthage).

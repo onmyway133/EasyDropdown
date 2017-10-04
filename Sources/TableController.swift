@@ -75,7 +75,7 @@ open class TableController: UIViewController, UITableViewDataSource, UITableView
 
   // MARK: - Touch
 
-  func viewTapped(_ gesture: UITapGestureRecognizer) {
+  @objc func viewTapped(_ gesture: UITapGestureRecognizer) {
     dismiss?()
   }
 

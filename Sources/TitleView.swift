@@ -39,7 +39,7 @@ open class TitleView: UIView {
 
     dropdown.animationBlock = { [weak self] showing in
       self?.button.arrow.transform = showing
-        ? CGAffineTransform(rotationAngle: CGFloat(M_PI)) : CGAffineTransform.identity
+        ? CGAffineTransform(rotationAngle: CGFloat.pi) : CGAffineTransform.identity
     }
   }
 
@@ -56,7 +56,7 @@ open class TitleView: UIView {
 
   // MARK: - Action
 
-  func buttonTouched(_ button: ArrowButton) {
+  @objc func buttonTouched(_ button: ArrowButton) {
     dropdown.toggle()
   }
 }
