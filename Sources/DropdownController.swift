@@ -79,7 +79,7 @@ open class DropdownController: UIViewController {
 
   // MARK: - Action
 
-  func backgroundViewTapped(_ gesture: UITapGestureRecognizer) {
+  @objc func backgroundViewTapped(_ gesture: UITapGestureRecognizer) {
     hide()
   }
 
