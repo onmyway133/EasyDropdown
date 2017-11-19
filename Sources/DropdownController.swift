@@ -21,9 +21,16 @@ open class DropdownController: UIViewController {
   public convenience init?(contentController: UIViewController, navigationController: UINavigationController) {
     guard let containerView = navigationController.tabBarController?.view ?? navigationController.view
       else { return nil }
-
-    let offsetY = navigationController.navigationBar.frame.maxY
-
+    var offsetY: CGFloat = 0
+    if #available(iOS 11.0, *) {
+        if navigationController.navigationBar.prefersLargeTitles {
+            offsetY = navigationController.navigationBar.frame.maxY + UIApplication.shared.statusBarFrame.height
+        } else {
+            offsetY = navigationController.navigationBar.frame.maxY
+        }
+    } else {
+        offsetY = navigationController.navigationBar.frame.maxY
+    }
     self.init(contentController: contentController, containerView: containerView, offsetY: offsetY)
   }
 

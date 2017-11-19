@@ -14,6 +14,7 @@ open class TitleView: UIView {
     // Button
     button = ArrowButton()
     button.label.text = title
+    button.label.font = UIFont(name: "Circe", size: 17)
     button.addTarget(self, action: #selector(buttonTouched(_:)), for: .touchUpInside)
     addSubview(button)
 
