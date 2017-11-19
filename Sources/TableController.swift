@@ -69,7 +69,6 @@ open class TableController: UIViewController, UITableViewDataSource, UITableView
   func makeTopView() -> UIView {
     let view = UIView()
     view.backgroundColor = Config.List.backgroundColor
-
     return view
   }
 
