@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0900"
+   LastUpgradeVersion = "0910"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D5B2E89E1C3A780C00C0327D"
-               BuildableName = "Dropdown.framework"
-               BlueprintName = "Dropdown-iOS"
-               ReferencedContainer = "container:Dropdown.xcodeproj">
+               BuildableName = "Dropdowns.framework"
+               BlueprintName = "Dropdowns"
+               ReferencedContainer = "container:Dropdowns.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,26 +29,7 @@
       language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D5B2E8A81C3A780C00C0327D"
-               BuildableName = "Dropdown-iOS-Tests.xctest"
-               BlueprintName = "Dropdown-iOS-Tests"
-               ReferencedContainer = "container:Dropdown.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D5B2E89E1C3A780C00C0327D"
-            BuildableName = "Dropdown.framework"
-            BlueprintName = "Dropdown-iOS"
-            ReferencedContainer = "container:Dropdown.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -67,9 +48,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D5B2E89E1C3A780C00C0327D"
-            BuildableName = "Dropdown.framework"
-            BlueprintName = "Dropdown-iOS"
-            ReferencedContainer = "container:Dropdown.xcodeproj">
+            BuildableName = "Dropdowns.framework"
+            BlueprintName = "Dropdowns"
+            ReferencedContainer = "container:Dropdowns.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -85,9 +66,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D5B2E89E1C3A780C00C0327D"
-            BuildableName = "Dropdown.framework"
-            BlueprintName = "Dropdown-iOS"
-            ReferencedContainer = "container:Dropdown.xcodeproj">
+            BuildableName = "Dropdowns.framework"
+            BlueprintName = "Dropdowns"
+            ReferencedContainer = "container:Dropdowns.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

@@ -51,6 +51,8 @@ open class TitleView: UIView {
     super.layoutSubviews()
 
     button.sizeToFit()
+    button.label.sizeToFit()
+    button.frame.size.height = 44
     frame.size = button.frame.size
   }
 

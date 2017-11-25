@@ -1,12 +1,12 @@
 Pod::Spec.new do |s|
-  s.name             = "Dropdown"
+  s.name             = "Dropdowns"
   s.summary          = "Dropdown in Swift"
-  s.version          = "1.0.0"
-  s.homepage         = "https://github.com/hyperoslo/Dropdown"
+  s.version          = "2.0.0"
+  s.homepage         = "https://github.com/hyperoslo/Dropdowns"
   s.license          = 'MIT'
   s.author           = { "Hyper Interaktiv AS" => "ios@hyper.no" }
   s.source           = {
-    :git => "https://github.com/hyperoslo/Dropdown.git",
+    :git => "https://github.com/hyperoslo/Dropdowns.git",
     :tag => s.version.to_s
   }
   s.social_media_url = 'https://twitter.com/hyperoslo'

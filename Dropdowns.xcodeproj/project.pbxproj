@@ -16,21 +16,7 @@
 		D2BD54B01DA19ED500453CAC /* TableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD54AA1DA19ED500453CAC /* TableController.swift */; };
 		D2BD54B11DA19ED500453CAC /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD54AB1DA19ED500453CAC /* TitleView.swift */; };
 		D2FAE92C1D426DB200EE3E62 /* Dropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FAE92B1D426DB200EE3E62 /* Dropdown.swift */; };
-		D2FAE92E1D426DC400EE3E62 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FAE92D1D426DC400EE3E62 /* Tests.swift */; };
-		D5B2E8AA1C3A780C00C0327D /* Dropdown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B2E89F1C3A780C00C0327D /* Dropdown.framework */; };
-		D5C629771C3A878E007F7B7C /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629751C3A878E007F7B7C /* Quick.framework */; };
-		D5C629781C3A878E007F7B7C /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629761C3A878E007F7B7C /* Nimble.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		D5B2E8AB1C3A780C00C0327D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D5B2E8961C3A780C00C0327D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D5B2E89E1C3A780C00C0327D;
-			remoteInfo = Dropdown;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		D268DB661D51259B0097AD6F /* Dropdown.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Dropdown.bundle; sourceTree = "<group>"; };
@@ -42,19 +28,8 @@
 		D2BD54AA1DA19ED500453CAC /* TableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableController.swift; sourceTree = "<group>"; };
 		D2BD54AB1DA19ED500453CAC /* TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		D2FAE92B1D426DB200EE3E62 /* Dropdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dropdown.swift; sourceTree = "<group>"; };
-		D2FAE92D1D426DC400EE3E62 /* Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		D500FD111C3AABED00782D78 /* Playground-iOS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Playground-iOS.playground"; sourceTree = "<group>"; };
-		D500FD121C3AAC8E00782D78 /* Playground-Mac.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Playground-Mac.playground"; sourceTree = "<group>"; };
-		D5B2E89F1C3A780C00C0327D /* Dropdown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Dropdown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5B2E8A91C3A780C00C0327D /* Dropdown-iOS-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dropdown-iOS-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5C629751C3A878E007F7B7C /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
-		D5C629761C3A878E007F7B7C /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
-		D5C629791C3A879F007F7B7C /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
-		D5C6297A1C3A879F007F7B7C /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
+		D5B2E89F1C3A780C00C0327D /* Dropdowns.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Dropdowns.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C6298B1C3A8BBD007F7B7C /* Info-iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
-		D5C6298C1C3A8BBD007F7B7C /* Info-Mac.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-Mac.plist"; sourceTree = "<group>"; };
-		D5C629901C3A8BDA007F7B7C /* Info-iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
-		D5C629911C3A8BDA007F7B7C /* Info-Mac.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-Mac.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,39 +40,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D5B2E8A61C3A780C00C0327D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D5C629771C3A878E007F7B7C /* Quick.framework in Frameworks */,
-				D5C629781C3A878E007F7B7C /* Nimble.framework in Frameworks */,
-				D5B2E8AA1C3A780C00C0327D /* Dropdown.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D2FAE92A1D426DA200EE3E62 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D5C629791C3A879F007F7B7C /* Quick.framework */,
-				D5C6297A1C3A879F007F7B7C /* Nimble.framework */,
-				D5C629751C3A878E007F7B7C /* Quick.framework */,
-				D5C629761C3A878E007F7B7C /* Nimble.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		D5B2E8951C3A780C00C0327D = {
 			isa = PBXGroup;
 			children = (
-				D2FAE92A1D426DA200EE3E62 /* Frameworks */,
-				D500FD111C3AABED00782D78 /* Playground-iOS.playground */,
-				D500FD121C3AAC8E00782D78 /* Playground-Mac.playground */,
 				D5C629691C3A809D007F7B7C /* Sources */,
 				D5C6295C1C3A800E007F7B7C /* Dropdown */,
-				D5C6298F1C3A8BDA007F7B7C /* DropdownTests */,
 				D5B2E8A01C3A780C00C0327D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -105,8 +55,7 @@
 		D5B2E8A01C3A780C00C0327D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D5B2E89F1C3A780C00C0327D /* Dropdown.framework */,
-				D5B2E8A91C3A780C00C0327D /* Dropdown-iOS-Tests.xctest */,
+				D5B2E89F1C3A780C00C0327D /* Dropdowns.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,7 +64,6 @@
 			isa = PBXGroup;
 			children = (
 				D5C6298B1C3A8BBD007F7B7C /* Info-iOS.plist */,
-				D5C6298C1C3A8BBD007F7B7C /* Info-Mac.plist */,
 			);
 			path = Dropdown;
 			sourceTree = "<group>";
@@ -136,16 +84,6 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		D5C6298F1C3A8BDA007F7B7C /* DropdownTests */ = {
-			isa = PBXGroup;
-			children = (
-				D5C629901C3A8BDA007F7B7C /* Info-iOS.plist */,
-				D5C629911C3A8BDA007F7B7C /* Info-Mac.plist */,
-				D2FAE92D1D426DC400EE3E62 /* Tests.swift */,
-			);
-			path = DropdownTests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -159,9 +97,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		D5B2E89E1C3A780C00C0327D /* Dropdown-iOS */ = {
+		D5B2E89E1C3A780C00C0327D /* Dropdowns */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D5B2E8B31C3A780C00C0327D /* Build configuration list for PBXNativeTarget "Dropdown-iOS" */;
+			buildConfigurationList = D5B2E8B31C3A780C00C0327D /* Build configuration list for PBXNativeTarget "Dropdowns" */;
 			buildPhases = (
 				D5B2E89A1C3A780C00C0327D /* Sources */,
 				D5B2E89B1C3A780C00C0327D /* Frameworks */,
@@ -172,29 +110,10 @@
 			);
 			dependencies = (
 			);
-			name = "Dropdown-iOS";
+			name = Dropdowns;
 			productName = Dropdown;
-			productReference = D5B2E89F1C3A780C00C0327D /* Dropdown.framework */;
+			productReference = D5B2E89F1C3A780C00C0327D /* Dropdowns.framework */;
 			productType = "com.apple.product-type.framework";
-		};
-		D5B2E8A81C3A780C00C0327D /* Dropdown-iOS-Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D5B2E8B61C3A780C00C0327D /* Build configuration list for PBXNativeTarget "Dropdown-iOS-Tests" */;
-			buildPhases = (
-				D5B2E8A51C3A780C00C0327D /* Sources */,
-				D5B2E8A61C3A780C00C0327D /* Frameworks */,
-				D5B2E8A71C3A780C00C0327D /* Resources */,
-				D5C629731C3A86E3007F7B7C /* Copy frameworks with Carthage */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D5B2E8AC1C3A780C00C0327D /* PBXTargetDependency */,
-			);
-			name = "Dropdown-iOS-Tests";
-			productName = DropdownTests;
-			productReference = D5B2E8A91C3A780C00C0327D /* Dropdown-iOS-Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -207,10 +126,6 @@
 				ORGANIZATIONNAME = "Hyper Interaktiv AS";
 				TargetAttributes = {
 					D5B2E89E1C3A780C00C0327D = {
-						CreatedOnToolsVersion = 7.2;
-						LastSwiftMigration = 0800;
-					};
-					D5B2E8A81C3A780C00C0327D = {
 						CreatedOnToolsVersion = 7.2;
 						LastSwiftMigration = 0800;
 					};
@@ -228,8 +143,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D5B2E89E1C3A780C00C0327D /* Dropdown-iOS */,
-				D5B2E8A81C3A780C00C0327D /* Dropdown-iOS-Tests */,
+				D5B2E89E1C3A780C00C0327D /* Dropdowns */,
 			);
 		};
 /* End PBXProject section */
@@ -243,33 +157,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D5B2E8A71C3A780C00C0327D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		D5C629731C3A86E3007F7B7C /* Copy frameworks with Carthage */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
-			);
-			name = "Copy frameworks with Carthage";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D5B2E89A1C3A780C00C0327D /* Sources */ = {
@@ -287,23 +175,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D5B2E8A51C3A780C00C0327D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D2FAE92E1D426DC400EE3E62 /* Tests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		D5B2E8AC1C3A780C00C0327D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D5B2E89E1C3A780C00C0327D /* Dropdown-iOS */;
-			targetProxy = D5B2E8AB1C3A780C00C0327D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		D5B2E8B11C3A780C00C0327D /* Debug */ = {
@@ -428,7 +300,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "no.hyper.Dropdown-iOS";
-				PRODUCT_NAME = Dropdown;
+				PRODUCT_NAME = Dropdowns;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -448,35 +320,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "no.hyper.Dropdown-iOS";
-				PRODUCT_NAME = Dropdown;
+				PRODUCT_NAME = Dropdowns;
 				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		D5B2E8B71C3A780C00C0327D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = "$(SRCROOT)/DropdownTests/Info-iOS.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = no.hyper.DropdownTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		D5B2E8B81C3A780C00C0327D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = "$(SRCROOT)/DropdownTests/Info-iOS.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = no.hyper.DropdownTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -492,20 +337,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D5B2E8B31C3A780C00C0327D /* Build configuration list for PBXNativeTarget "Dropdown-iOS" */ = {
+		D5B2E8B31C3A780C00C0327D /* Build configuration list for PBXNativeTarget "Dropdowns" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5B2E8B41C3A780C00C0327D /* Debug */,
 				D5B2E8B51C3A780C00C0327D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D5B2E8B61C3A780C00C0327D /* Build configuration list for PBXNativeTarget "Dropdown-iOS-Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D5B2E8B71C3A780C00C0327D /* Debug */,
-				D5B2E8B81C3A780C00C0327D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

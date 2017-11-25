@@ -1,5 +1,4 @@
 import UIKit
-import Dropdown
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
