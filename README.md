@@ -6,7 +6,10 @@ Dropdown in Swift
 [![Platform](https://img.shields.io/cocoapods/p/Dropdowns.svg?style=flat)](http://cocoadocs.org/docsets/Dropdowns)
 ![Swift](https://img.shields.io/badge/%20in-swift%204.0-orange.svg)
 
-![](Screenshots/dropdown.gif)
+<div align="center">
+	<img src="Screenshots/dropdown.gif" height="400" />
+	<img src="Screenshots/x.png" height="400" />
+</div>
 
 ## Usage
 
