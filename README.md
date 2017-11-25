@@ -10,7 +10,11 @@ Dropdown in Swift
 
 ## Usage
 
+`Dropdowns` provides the quickest way to present a dropdown in your app. It is very lightweight, just provide a list of items and the action closure you want to handle.
+
 ### Basic
+
+`Dropdowns` works by showing a child `UIViewController` as a dropdown from a `TitleView`. The most common use case is to show from a `UINavigationController`, in that sense, you can just create a list of items, and provide to `TitleView`.
 
 ```swift
 let items = ["World", "Sports", "Culture", "Business", "Travel"]
@@ -24,6 +28,8 @@ navigationItem.titleView = titleView
 
 ### Customization
 
+`Dropdowns` uses `TableController` by default, to show list of items in a `UITableView`. You can customise to show anything you want by using `contentController`.
+
 ```swift
 let contentController = TableController(items: items, initialIndex: 0)
 let dropdown = DropdownController(contentController: contentController, navigationController: navigationController)
@@ -31,11 +37,11 @@ let dropdown = DropdownController(contentController: contentController, navigati
 
 ### Configuration
 
+You can also customise many aspects of `Dropdowns` via `Config`
+
 ```swift
 Config.List.DefaultCell.Text.color = UIColor.redColor()
 ```
-
-
 
 ## Installation
 
