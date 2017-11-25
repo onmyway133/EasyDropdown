@@ -22,15 +22,13 @@ open class ArrowButton: UIButton {
   open override func layoutSubviews() {
     super.layoutSubviews()
 
+    label.sizeToFit()
     label.center = CGPoint(x: bounds.size.width / 2, y: bounds.size.height / 2)
-
     arrow.frame.size = CGSize(width: arrowSize, height: arrowSize)
     arrow.center = CGPoint(x: label.frame.maxX + padding, y: bounds.size.height / 2)
   }
 
   open override func sizeThatFits(_ size: CGSize) -> CGSize {
-    label.sizeToFit()
-
     return CGSize(width: label.frame.size.width + arrowSize*2 + padding,
                   height: label.frame.size.height)
   }
