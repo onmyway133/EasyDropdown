@@ -8,7 +8,7 @@ Dropdown in Swift
 
 <div align="center">
 	<img src="Screenshots/dropdown.gif" height="400" />
-	<img src="Screenshots/x.png" height="400" />
+	<img src="Screenshots/x.png" height="500" />
 </div>
 
 ## Usage
