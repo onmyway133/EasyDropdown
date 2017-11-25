@@ -7,7 +7,7 @@ public struct Config {
   public struct ArrowButton {
 
     public struct Text {
-      public static var color: UIColor = UIColor.white
+      public static var color: UIColor = UIColor.black
       public static var selectedColor: UIColor = UIColor.gray
       public static var font: UIFont = UIFont.boldSystemFont(ofSize: 18)
     }
