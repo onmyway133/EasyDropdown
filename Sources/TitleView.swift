@@ -8,7 +8,7 @@ open class TitleView: UIView {
 
   // MARK: - Initialization
 
-  public init?(navigationController: UINavigationController, title: String, items: [String]) {
+    public init?(navigationController: UINavigationController, title: String, items: [String], initialIndex: Int = 0) {
     super.init(frame: CGRect.zero)
 
     // Button
@@ -18,7 +18,7 @@ open class TitleView: UIView {
     addSubview(button)
 
     // Content
-    let contentController = TableController(items: items, initialIndex: 0)
+    let contentController = TableController(items: items, initialIndex: initialIndex)
 
     // Dropdown
     guard let dropdown = DropdownController(contentController: contentController, navigationController: navigationController)
