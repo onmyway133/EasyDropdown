@@ -66,7 +66,11 @@ github "hyperoslo/Dropdowns"
 
 ## Author
 
-Hyper Interaktiv AS, ios@hyper.no
+- Khoa Pham, onmyway133@gmai.com
+
+## Credit
+
+- Hyper Interaktiv AS, ios@hyper.no
 
 ## Contributing
 
