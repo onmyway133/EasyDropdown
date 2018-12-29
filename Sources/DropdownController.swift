@@ -38,9 +38,9 @@ open class DropdownController: UIViewController {
     view.clipsToBounds = true
 
     self.contentController = contentController
-    addChildViewController(contentController)
+    addChild(contentController)
     view.addSubview(contentController.view)
-    contentController.didMove(toParentViewController: self)
+    contentController.didMove(toParent: self)
   }
 
   public required init?(coder aDecoder: NSCoder) {
