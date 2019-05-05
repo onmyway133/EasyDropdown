@@ -1,15 +1,15 @@
 Pod::Spec.new do |s|
   s.name             = "Dropdowns"
-  s.summary          = "Dropdown in Swift"
-  s.version          = "2.0.0"
-  s.homepage         = "https://github.com/hyperoslo/Dropdowns"
+  s.summary          = "Fantastic dropdown in Swift"
+  s.version          = "3.0.0"
+  s.homepage         = "https://github.com/onmyway133/Dropdowns"
   s.license          = 'MIT'
-  s.author           = { "Hyper Interaktiv AS" => "ios@hyper.no" }
+  s.author           = { "Khoa Pham" => "onmyway133@gmail.com" }
   s.source           = {
-    :git => "https://github.com/hyperoslo/Dropdowns.git",
+    :git => "https://github.com/onmyway133/Dropdowns.git",
     :tag => s.version.to_s
   }
-  s.social_media_url = 'https://twitter.com/hyperoslo'
+  s.social_media_url = 'https://twitter.com/onmyway133'
 
   s.ios.deployment_target = '9.0'
 
@@ -18,6 +18,6 @@ Pod::Spec.new do |s|
   s.ios.frameworks = 'UIKit'
   s.ios.resource = 'Sources/Dropdown.bundle'
 
-  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
+  s.swift_version = '5.0'
 
 end

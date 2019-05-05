@@ -59,7 +59,7 @@ pod 'Dropdowns'
 To install just write into your Cartfile:
 
 ```ruby
-github "hyperoslo/Dropdowns"
+github "onmyway133/Dropdowns"
 ```
 
 **Dropdowns** can also be installed manually. Just download and drop `Sources` folders in your project.
@@ -74,8 +74,8 @@ github "hyperoslo/Dropdowns"
 
 ## Contributing
 
-We would love you to contribute to **Dropdowns**, check the [CONTRIBUTING](https://github.com/hyperoslo/Dropdown/blob/master/CONTRIBUTING.md) file for more info.
+We would love you to contribute to **Dropdowns**, check the [CONTRIBUTING](https://github.com/onmyway133/Dropdown/blob/master/CONTRIBUTING.md) file for more info.
 
 ## License
 
-**Dropdowns** is available under the MIT license. See the [LICENSE](https://github.com/hyperoslo/Dropdown/blob/master/LICENSE.md) file for more info.
+**Dropdowns** is available under the MIT license. See the [LICENSE](https://github.com/onmyway133/Dropdown/blob/master/LICENSE.md) file for more info.
