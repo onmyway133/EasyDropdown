@@ -1,16 +1,16 @@
 PODS:
-  - Dropdowns (2.0.0)
+  - Dropdowns (3.0.0)
 
 DEPENDENCIES:
   - Dropdowns (from `../../`)
 
 EXTERNAL SOURCES:
   Dropdowns:
-    :path: ../../
+    :path: "../../"
 
 SPEC CHECKSUMS:
-  Dropdowns: 73a46fc0898a341551b91fca6ba4256fc4739bee
+  Dropdowns: 25767b50a5d2f54a676ad22813c1a1f7d59c2ea0
 
 PODFILE CHECKSUM: 3e674c482c79f3d68b224f649d9ae80e050ec4d9
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.7.0.beta.3

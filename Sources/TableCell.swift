@@ -8,16 +8,16 @@ open class TableCell: UITableViewCell {
 
   // MARK: - Initialization
 
-  public override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-    super.init(style: style, reuseIdentifier: reuseIdentifier)
+    public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
 
-    contentView.addSubview(label)
-    contentView.addSubview(checkmark)
-    contentView.addSubview(separator)
+        contentView.addSubview(label)
+        contentView.addSubview(checkmark)
+        contentView.addSubview(separator)
 
-    setupContraints()
+        setupContraints()
 
-    backgroundColor = Config.List.backgroundColor
+        backgroundColor = Config.List.backgroundColor
   }
 
   public required init?(coder aDecoder: NSCoder) {

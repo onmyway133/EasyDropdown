@@ -4,7 +4,7 @@ Dropdown in Swift
 [![Version](https://img.shields.io/cocoapods/v/Dropdowns.svg?style=flat)](http://cocoadocs.org/docsets/Dropdowns)
 [![License](https://img.shields.io/cocoapods/l/Dropdowns.svg?style=flat)](http://cocoadocs.org/docsets/Dropdowns)
 [![Platform](https://img.shields.io/cocoapods/p/Dropdowns.svg?style=flat)](http://cocoadocs.org/docsets/Dropdowns)
-![Swift](https://img.shields.io/badge/%20in-swift%204.0-orange.svg)
+![Swift](https://img.shields.io/badge/%20in-swift%205.0-orange.svg)
 
 <div align="center">
 	<img src="Screenshots/dropdown.gif" height="400" />
