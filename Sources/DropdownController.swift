@@ -122,7 +122,7 @@ open class DropdownController: UIViewController {
     }
 
     UIView.animate(withDuration: 0.5, delay: 0,
-                               usingSpringWithDamping: 0.7,
+                               usingSpringWithDamping: Config.springAnimationDamping,
                                initialSpringVelocity: 0.5,
                                options: [],
                                animations:
