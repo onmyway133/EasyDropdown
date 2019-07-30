@@ -6,7 +6,13 @@ open class TableController: UIViewController, UITableViewDataSource, UITableView
   open var action: ((Int) -> Void)?
   open var dismiss: (() -> Void)?
 
-  let items: [String]
+  public var items: [String] {
+    didSet {
+      if self.isViewLoaded {
+        self.tableView.reloadData()
+      }
+    }
+  }
   var selectedIndex: Int
   lazy var topView: UIView = self.makeTopView()
 

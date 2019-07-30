@@ -12,7 +12,7 @@ open class DropdownController: UIViewController {
   lazy var topLine: CALayer = self.makeTopLine()
 
   var offsetY: CGFloat = 0
-  var showing: Bool = false
+  public internal(set) var showing: Bool = false
   var animating: Bool = false
   let padding: CGFloat = 20
 
@@ -122,7 +122,7 @@ open class DropdownController: UIViewController {
     }
 
     UIView.animate(withDuration: 0.5, delay: 0,
-                               usingSpringWithDamping: 0.7,
+                               usingSpringWithDamping: Config.springAnimationDamping,
                                initialSpringVelocity: 0.5,
                                options: [],
                                animations:

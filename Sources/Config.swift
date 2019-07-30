@@ -3,6 +3,7 @@ import UIKit
 public struct Config {
 
   public static var topLineColor: UIColor = UIColor.darkGray.withAlphaComponent(0.8)
+  public static var springAnimationDamping: CGFloat = 0.7
 
   public struct ArrowButton {
 
