@@ -50,10 +50,12 @@ open class TitleView: UIView {
   open override func layoutSubviews() {
     super.layoutSubviews()
 
-    button.sizeToFit()
-    button.label.sizeToFit()
-    button.frame.size.height = 44
-    frame.size = button.frame.size
+    DispatchQueue.main.async {
+        self.button.sizeToFit()
+        self.button.label.sizeToFit()
+        self.button.frame.size.height = 44
+        self.frame.size = self.button.frame.size
+    }
   }
 
   // MARK: - Action
