@@ -28,8 +28,8 @@ open class ArrowButton: UIButton {
   }
 
   open override func sizeThatFits(_ size: CGSize) -> CGSize {
-    return CGSize(width: label.frame.size.width + arrowSize*2 + padding,
-                  height: label.frame.size.height)
+    return CGSize(width: label.intrinsicContentSize.width + arrowSize * 2 + padding,
+                  height: label.intrinsicContentSize.height)
   }
 
   // MARK: - Views
